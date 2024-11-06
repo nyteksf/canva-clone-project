@@ -13,6 +13,8 @@ const app = new Hono()
         });
 
         if (images.errors) {
+            console.error("Unsplash API error:", images.errors);
+            console.log("Unsplash API error:",   images.errors);
 
             return c.json({ error: "Something went wrong. 😞"}, 400);
         }
