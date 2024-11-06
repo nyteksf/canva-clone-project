@@ -13,10 +13,7 @@ export const useGetImages = () => {
             try {
                 console.log("Making request to fetch images...");
                 console.log("API method:", client.api?.images?.$get); 
-                const response = await client.api.images.$get().catch(err => {
-                    console.error("Error calling API:", err);
-                    throw err; // Optional, to rethrow the error after logging
-                }); // <-client from lib/hono 
+                const response = await client.api.images.$get();
 
                 // NOTHING FIRES BELOW THIS LINE:
                 console.log("response: " + response)
