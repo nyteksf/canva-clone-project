@@ -42,9 +42,6 @@ export const ImageSidebar = ({
         title="Images"
         description="Add images to your canvas"
       />
-      <div className="p-4 border-b">
-        
-      </div>
       {isLoading && (
         <div className="flex items-center justify-center flex-1">
           <Loader className="size-4 text-muted-foreground animate-spin" />
@@ -59,7 +56,7 @@ export const ImageSidebar = ({
         </div>
       )}
       <ScrollArea>
-        <div className="p-4">
+        <div className="p-4 space-y-1 border-b">
           <div className="grid grid-cols-2 gap-4">
             {data && data.map((image) => {
               return (

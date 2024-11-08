@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { handle } from "hono/vercel";
 
-import images from "./images";
+import images from "@/app/api/[[...route]]/images";
 
 // REVERT TO "edge" BELOW IF PLANNING ON RUNNING ON EDGE:
 export const runtime = "nodejs";

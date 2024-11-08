@@ -3,7 +3,7 @@ import { Hono } from "hono";
 import { unsplash } from "@/lib/unsplash";
 
 const DEFAULT_IMG_COUNT = 50;
-const DEFAULT_COLLECTION_IDS = ["317099"];
+const DEFAULT_COLLECTION_IDS = ["317099"];  // THIS COLLECTION EXISTS ON UNSPASH- VERIFIED!
 
 const app = new Hono()
     .get("/", async (c) => {
@@ -18,6 +18,7 @@ const app = new Hono()
 
             return c.json({ error: "Something went wrong. 😞"}, 400);
         }
+
         let response = images.response;
 
         // IF SINGLE ITEM RETURNED ONLY, TURN ITEM INTO ARRAY FOR EASE OF USE BELOW
